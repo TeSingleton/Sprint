@@ -1,12 +1,15 @@
-// import { questionsTemplate } from "./quizQuestions/QuestionTemplate.js"; 
+// import { questionsTemplate } from "./quizQuestions/QuestionTemplate.js";
 
 // include("questions.js");
-
 import { questionTemplate } from "./quizQuestions/QuestionTemplate.js";
 
+// DOM variables
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("dialog + button");
 const closeButton = document.querySelector("dialog button");
+
+// Template literal variables
+const questions = questionTemplate;
 
 // answer variables
 
@@ -19,6 +22,21 @@ let answer2 = document.getElementById("answer_2");
 let answer3 = document.getElementById("answer_3");
 
 let answer4 = document.getElementById("answer_4");
+
+// misc variables
+const currentDate = new Date();
+console.log(currentDate);
+console.dir(currentDate);
+var theTime = document.getElementById("time");
+console.dir(theTime);
+
+theTime.innerHTML = currentDate.toLocaleTimeString();
+
+// time variable ,add date and use this variable as a stamp for the players score.
+
+var theTime = currentDate.toLocaleTimeString();
+
+// Wrap the above variable in a function visit https://stackoverflow.com/questions/26584233/updating-javascript-time-every-second for more info.
 
 // Q and A Array
 // use template literals to create the questions and answers
