@@ -24,17 +24,17 @@ let answer3 = document.getElementById("answer_3");
 let answer4 = document.getElementById("answer_4");
 
 // misc variables
-const currentDate = new Date();
-console.log(currentDate);
-console.dir(currentDate);
-var theTime = document.getElementById("time");
-console.dir(theTime);
 
-theTime.innerHTML = currentDate.toLocaleTimeString();
+function updateTime(){
+  const currentDate = new Date();
+  var formattedTime = currentDate.toLocaleTimeString();
+  var theTime = document.getElementById("time");
+  theTime.innerHTML = currentDate.toLocaleTimeString();
+}
 
-// time variable ,add date and use this variable as a stamp for the players score.
+setInterval(updateTime, 1000);
 
-var theTime = currentDate.toLocaleTimeString();
+//*  */ 
 
 // Wrap the above variable in a function visit https://stackoverflow.com/questions/26584233/updating-javascript-time-every-second for more info.
 
