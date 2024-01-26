@@ -23,36 +23,28 @@ let answer3 = document.getElementById("answer_3");
 
 let answer4 = document.getElementById("answer_4");
 
-// misc variables
+// Local/ game time
 
-function updateTime(){
+function updateTime() {
   const currentDate = new Date();
-  var formattedTime = currentDate.toLocaleTimeString();
+
   var theTime = document.getElementById("time");
   theTime.innerHTML = currentDate.toLocaleTimeString();
 }
 
 setInterval(updateTime, 1000);
 
-//*  */ 
+//  create timer so that it pulls from the local time
+function starTimer() {
+  var timerElement = document.createElement("p");
+}
 
-// Wrap the above variable in a function visit https://stackoverflow.com/questions/26584233/updating-javascript-time-every-second for more info.
+//*  */
 
-// Q and A Array
-// use template literals to create the questions and answers
-// template literals are strings that allow embedded expressions. I will use them to identify the answers by the users name.
+//  function to show questions made from template literals
+function showQuestions() {}
 
-// let questionsAndAnswers = [{question:
-//                            answers:{
-//                             a:,
-//                             b:,
-//                             c:,
-//                             d:,
-
-//                            }},{];
-
-// "Show the dialog" button opens the dialog modally
-
+// DIALOG show/hide functionality
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
@@ -60,6 +52,17 @@ showButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
+
+// onClick submit button starts quiz
+// onclick show questions
+
+var submitButton = document.getElementById("submit");
+
+submitButton.addEventListener("click", () => {
+  showQuestions();
+  starTimer();
+});
+
 // if (pressStart) {
 
 // }
@@ -79,3 +82,20 @@ closeButton.addEventListener("click", () => {
  *          Time goes down with each wrong answer == -10
  *          +5 seconds for each correct answer
  *          The number of correct answers + the timer is the users score. **/
+
+// Wrap the above variable in a function visit https://stackoverflow.com/questions/26584233/updating-javascript-time-every-second for more info.
+
+// Q and A Array
+// use template literals to create the questions and answers
+// template literals are strings that allow embedded expressions. I will use them to identify the answers by the users name.
+
+// let questionsAndAnswers = [{question:
+//                            answers:{
+//                             a:,
+//                             b:,
+//                             c:,
+//                             d:,
+
+//                            }},{];
+
+// "Show the dialog" button opens the dialog modally
